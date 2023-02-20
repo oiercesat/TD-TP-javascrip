@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp2 Exercice5</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <select name="select" id="select" onchange="couleur()">
+        <option value="gris">Gris</option>
+        <option value="bleu">Bleu</option>
+        <option value="vert">Vert</option>
+    </select>
+    <script>
+        function couleur() {
+            var couleur = document.getElementById("select").value;
+            if (couleur == "gris") {
+                document.body.style.backgroundColor = "#C0C0C0";
+            }
+            else if (couleur == "bleu") {
+                document.body.style.backgroundColor = "#669999";
+            }
+            else if (couleur == "vert") {
+                document.body.style.backgroundColor = "#99FF66";
+            }
+            else {
+                document.write("Vous n'avez pas choisi une couleur de base");
+            }
+        }
+    </script>
+</body>
+
+</html>

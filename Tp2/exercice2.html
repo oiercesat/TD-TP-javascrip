@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp2 exercice2</title>
+</head>
+<body>
+    <script>
+        function somRec(i)
+        {
+            if(i<0 || !Number.isInteger(i))
+            {
+                return "Infinity";
+            }
+            else
+            {
+                /*somme récursive*/
+                return i+somRec(i-1);
+            }
+        }
+
+        function somFor(i){
+            var som=0
+            for(var j=0; j<=i; j++)
+            {
+                som+=j;
+            }
+            return som;
+        }
+        var i=0;
+        i=prompt("Entrez un nombre entier positif");
+        document.write("Somme récursive : "+somRec(i)+"<br>");
+    </script>
+</body>
+</html>

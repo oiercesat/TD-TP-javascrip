@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp2 exercice4</title>
+</head>
+<body>
+    <p>3*2</p>
+    <input type="number" id="multiplication1">
+    <br>
+    <p>3*3</p>
+    <input type="number" id="multiplication2">
+    <br>
+    <p>3*4</p>
+    <input type="number" id="multiplication3">
+    <br>
+    <button>Voir les resultats</button>
+    <script>
+        var btn=document.querySelector("button");
+        btn.addEventListener("click", function(){
+            var multiplication1=document.getElementById("multiplication1").value;
+            var multiplication2=document.getElementById("multiplication2").value;
+            var multiplication3=document.getElementById("multiplication3").value;
+            var nbBonneReponse=0;
+            if(multiplication1==6)
+            {
+                nbBonneReponse++;
+            }
+            if(multiplication2==9)
+            {
+                nbBonneReponse++;
+            }
+            if(multiplication3==12)
+            {
+                nbBonneReponse++;
+            }
+            alert("Vous avez "+nbBonneReponse+" bonne(s) réponse(s)");
+        });
+    </script>
+</body>
+</html>
