@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Écriture d'une fonction avec arguments</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h1>Écriture d'une fonction avec arguments</h1>
+
+    <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button id="bouton" ondblclick="afficher2()">Lancer la fonction</button></p>
+    <script>
+        var a = 3;
+        var b = 2;
+        var tab = [-2,1,4];
+        function multiplier(a, b) {
+            if(b==null){
+                b=8;
+                var resultat = a * b;
+                return resultat;
+            }
+            else{
+                var resultat = a * b;
+                return resultat;
+            }
+        }
+
+        function multiplier2(x,tab){
+            var resultat =0;
+            for(var i=0; i<tab.length; i++){
+                resultat = x * tab[i];
+                alert("Le résultat est " + resultat);
+            }
+        }
+
+        function afficher() {
+            multiplier2(a,tab);
+        }
+
+        function afficher2() {
+            for(var i=0; i<tab.length-1; i++){
+                alert("Le résultat est " + multiplier(tab[i],tab[i+1]));
+            }
+        }
+
+        function trier(tab){
+            tab.sort(function(a, b){return a-b});
+            alert(tab);
+        }
+
+        document.getElementById('bouton').addEventListener('mouseover', function() {
+            trier(tab);
+        });
+    </script>
+
+</body>
+
+</html>
