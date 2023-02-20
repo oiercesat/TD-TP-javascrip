@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function aire() {       
+            var longueur = document.getElementById("longueur_aire").value;
+            var largeur = document.getElementById("largeur_aire").value;
+            var aire = longueur * largeur;
+            alert("L'aire du rectangle est de " + aire + " cm²");
+        }
+
+        function perimetre() {       
+            var longueur = document.getElementById("longueur_perimetre").value;
+            var largeur = document.getElementById("largeur_perimetre").value;
+            var perimetre = longueur * 2 + largeur * 2;
+            alert("Le périmètre du rectangle est de " + perimetre + " cm");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calcul de l'aire</h1>
+    <form>
+        <input type="number" id="longueur_aire">
+        <input type="number" id="largeur_aire">
+        <input type="submit" value="Calculer l'aire" onclick="aire()">
+    </form>
+    <h1>Calcul du périmètre</h1>
+    <form>
+        <input type="number" id="longueur_perimetre">
+        <input type="number" id="largeur_perimetre">
+        <input type="submit" value="Calculer le périmètre" onclick="perimetre()">
+    </form>
+
+</body>
+
+</html>
